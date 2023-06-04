@@ -1,0 +1,28 @@
+.personalInfoContainer {
+    display: flex;
+    margin: 150px 0;
+}
+
+.textContainerCV {
+    border: 1px solid #008000;
+    margin-right: 100px;
+    padding: 16px;
+
+}
+
+.imgContainerCV {
+    width: 300px;
+    height: 300px;
+    border: 4px solid #008000;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.imgContainerCV img {
+    width: 300px;
+    height: 300px;
+    border-radius: 20%;
+}
+
+
+

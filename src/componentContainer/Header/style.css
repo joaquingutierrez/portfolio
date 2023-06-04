@@ -1,0 +1,21 @@
+.headerContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "logo_area nav_area utils_area";
+}
+.navbar {
+    grid-area: "nav_area";
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    grid-area: "logo_area";
+}
+.utils {
+    grid-area: "utils_area";
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

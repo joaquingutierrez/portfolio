@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css"
 
 
 const Header = () => {
@@ -10,14 +11,18 @@ const Header = () => {
 
 
     return (
-        <>
-            <h2>header</h2>
-            {sections.spanish.map(item => {
-                return <h3 key={item}>{item}</h3>
-            })}
-            <h3>English Version</h3>
-            <h3>Boton (Parar animaciones)</h3>
-        </>
+        <div className="headerContainer">
+            <h3 className="logo">LOGO</h3>
+            <nav className="navbar">
+                {sections.spanish.map(item => {
+                    return <h3 key={item}>{item}</h3>
+                })}
+            </nav>
+            <div className="utils">
+                <h3>English Version</h3>
+                <h3>Boton (Parar animaciones)</h3>
+            </div>
+        </div>
     )
 
 }

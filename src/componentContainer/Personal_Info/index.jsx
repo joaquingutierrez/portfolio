@@ -1,5 +1,8 @@
 import React from "react";
 
+import imgCV from "../../img/fotoCV.jpg"
+import "./style.css"
+
 
 
 const Personal_Info = () => {
@@ -25,14 +28,19 @@ const Personal_Info = () => {
 
     const render = (text) => {
         return (
-            <>
-                <h2>{text.title1}</h2>
-                <h2>{text.title2}</h2>
-                <h3>{text.subtitle}</h3>
-                <p>{text.p1}</p>
-                <p>{text.p2}</p>
-                <p>{text.p3}</p>
-            </>
+            <section className="personalInfoContainer">
+                <div className="textContainerCV holo">
+                    <h2>{text.title1}</h2>
+                    <h2>{text.title2}</h2>
+                    <h3>{text.subtitle}</h3>
+                    <p>{text.p1}</p>
+                    <p>{text.p2}</p>
+                    <p>{text.p3}</p>
+                </div>
+                <div className="imgContainerCV">
+                    <img src={imgCV} alt="Imagen de perfil" />
+                </div>
+            </section>
         )
     }
 
