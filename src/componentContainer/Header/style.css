@@ -5,6 +5,8 @@
     grid-template-areas: "logo_area nav_area utils_area";
     border-bottom: 3px solid #008000;
     position: relative;
+    background-color: black;
+    z-index: 10;
 }
 .navbar {
     grid-area: "nav_area";

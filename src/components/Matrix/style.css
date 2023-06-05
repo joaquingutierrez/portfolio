@@ -1,0 +1,8 @@
+.matrix-effect {
+    background-color: rgb(16, 20, 18);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  
