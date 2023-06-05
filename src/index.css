@@ -7,6 +7,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #101412;
   color: #008000;
+}
+#root {
   width: 1140px;
   margin: auto;
 }

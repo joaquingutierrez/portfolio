@@ -5,7 +5,7 @@ import "./style.css"
 
 
 
-const Personal_Info = () => {
+const PersonalInfo = () => {
 
     const personal_text = {
         spanish: {
@@ -52,4 +52,4 @@ const Personal_Info = () => {
 
 }
 
-export default Personal_Info
+export default PersonalInfo

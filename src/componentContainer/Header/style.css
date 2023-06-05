@@ -4,9 +4,12 @@
     grid-template-rows: 1fr;
     grid-template-areas: "logo_area nav_area utils_area";
     border-bottom: 3px solid #008000;
+    border-radius: 0px 0px 4px 0px;
     position: relative;
     background-color: black;
     z-index: 10;
+    width: 800px;
+    margin: auto;
 }
 .navbar {
     grid-area: "nav_area";
@@ -22,24 +25,29 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    z-index: 5;
 }
 
 .diagonal {
     position: absolute;
     content: "";
-    width: 3px;
+    width: 300px;
     height: 200px;
-    background-color: #008000;
-    bottom: -2px;
-    border-radius: 0px 0px 100px 100px;
+    background-color: black;
+    border-right: 3px solid #008000;
+    bottom: -2.8px;
+    border-radius: 0px 0px 4px 0px;
+    z-index: -1;
 }
 .diagonalLeft {
     left: 0px;
     transform: rotate(-45deg);
-    transform-origin: bottom;
+    border-left: 3px solid #008000;
+    transform-origin: bottom left;
 }
 .diagonalRight {
-    right: 0px;
+    right: 2px;
     transform: rotate(45deg);
-    transform-origin: bottom;
+    border-right: 3px solid #008000;
+    transform-origin: bottom right;
 }

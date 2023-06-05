@@ -10,7 +10,6 @@ const Matrix = ({canvasWidth, canvasHeight}) => {
         mainCanvas.width = canvasWidth;
         mainCanvas.height = canvasHeight;
 
-        console.log(mainCanvas.height)
 
         
         const fontSize = 10
@@ -22,7 +21,7 @@ const Matrix = ({canvasWidth, canvasHeight}) => {
         //creando el array
         const drops = []
         for (let i = 0; i < columns; i++) {
-            drops[i] = 1 //Establece todos los elementos en la posicion 1 (vertical)
+            drops[i] = Math.floor(Math.random() * 10 - 20) //Establece todos los elementos en la posicion -20 a 0
         }
 
         //funcion que va a dibujar
