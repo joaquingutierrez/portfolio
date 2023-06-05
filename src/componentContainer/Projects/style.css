@@ -1,0 +1,32 @@
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 140px;
+}
+
+.cardContainer {
+    width: 350px;
+    border: 1px solid #008000;
+    position: relative;
+    padding-top: 10%;
+    border-radius: 25%;
+    text-align: center;
+    box-shadow: 0px 0px 45px 15px rgba(0,128,0,0.77);
+}
+
+.cardContainer img {
+    width: 320px;
+    position: absolute;
+    top: -25%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+.techsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}

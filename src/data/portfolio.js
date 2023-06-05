@@ -1,8 +1,14 @@
+import imgG2 from "../img/fotografia-g2.png"
+import imgCine from "../img/cine.png"
+import imgProtoripo3D from "../img/prototipo-3d.png"
+import imgCalculator from "../img/calculator.png"
+import imgEspacioKlem from "../img/espacio-klem.png"
+
 export const portfolio = [
     {
         name: "Fotografía G2",
         linkToRepo: "https://github.com/joaquingutierrez/fotografia-g2",
-        image: "./img/fotografia-g2.png",
+        image: imgG2,
         linkToWebSite: "https://joaquingutierrez.github.io/fotografia-g2/",
         technology: [
             "HTML",
@@ -14,7 +20,7 @@ export const portfolio = [
     {
         name: "Cine",
         linkToRepo: "https://github.com/joaquingutierrez/cine",
-        image: "./img/cine.png",
+        image: imgCine,
         linkToWebSite: "https://cinejoaquingutierrez.netlify.app/",
         technology: [
             "HTML",
@@ -26,7 +32,7 @@ export const portfolio = [
     {
         name: "Protoripo 3D",
         linkToRepo: "https://github.com/joaquingutierrez/prototipo-3d",
-        image: "./img/prototipo-3d.png",
+        image: imgProtoripo3D,
         linkToWebSite: "https://prototipo-3d.vercel.app/",
         technology: [
             "HTML",
@@ -39,7 +45,7 @@ export const portfolio = [
     {
         name: "Calculator",
         linkToRepo: "https://github.com/joaquingutierrez/calculator",
-        image: "./img/calculator.png",
+        image: imgCalculator,
         linkToWebSite: "https://calculator-630ed7.netlify.app/",
         technology: [
             "HTML",
@@ -51,7 +57,7 @@ export const portfolio = [
     {
         name: "Espacio Klem",
         linkToRepo: "https://github.com/joaquingutierrez/espacio-klem",
-        image: "./img/espacio-klem.png",
+        image: imgEspacioKlem,
         linkToWebSite: "https://espacio-klem.vercel.app/",
         technology: [
             "HTML",

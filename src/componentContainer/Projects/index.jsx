@@ -1,5 +1,7 @@
 import React from "react";
+
 import { portfolio } from "../../data/portfolio"
+import "./style.css"
 
 
 const Projects = () => {
@@ -9,10 +11,10 @@ const Projects = () => {
         return (
             data.map(item => {
                 return (
-                    <div key={item.name}>
-                        <a href={item.linkToWebSite} target="_blank" rel="noreferrer">Link</a>
+                    <div key={item.name} className="cardContainer">
+                        <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt="Modificar despues" /></a>
                         <h3>{item.name}</h3>
-                        <div>
+                        <div className="techsContainer">
                             {item.technology.map(tec => {
                                 return <p key={tec}>{tec}</p>
                             })}
@@ -25,9 +27,9 @@ const Projects = () => {
     }
 
     return (
-        <>
+        <section id="projects">
             {render(portfolio)}
-        </>
+        </section>
     )
 }
 
