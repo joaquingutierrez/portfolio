@@ -11,7 +11,8 @@ const Header = () => {
 
 
     return (
-        <div className="headerContainer">
+        <header className="headerContainer">
+            <span className="diagonal diagonalLeft"></span>
             <h3 className="logo">LOGO</h3>
             <nav className="navbar">
                 {sections.spanish.map(item => {
@@ -22,7 +23,8 @@ const Header = () => {
                 <h3>English Version</h3>
                 <h3>Boton (Parar animaciones)</h3>
             </div>
-        </div>
+            <span className="diagonal diagonalRight"></span>
+        </header>
     )
 
 }
