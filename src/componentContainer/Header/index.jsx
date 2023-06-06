@@ -1,8 +1,10 @@
 import React from "react";
+
 import "./style.css"
+import { ButtonSwitch } from "../../components";
 
 
-const Header = () => {
+const Header = ({handleButton}) => {
 
     const sections = {
         spanish: ["Inicio", "Projectos", "Contacto"],
@@ -21,7 +23,7 @@ const Header = () => {
             </nav>
             <div className="utils">
                 <h3>English Version</h3>
-                <h3>Boton (Parar animaciones)</h3>
+                <ButtonSwitch handleButton={handleButton} />
             </div>
             <div className="diagonal diagonalRight"></div>
         </header>
