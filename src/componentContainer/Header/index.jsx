@@ -4,7 +4,7 @@ import "./style.css"
 import { ButtonSwitch } from "../../components";
 
 
-const Header = ({handleButton}) => {
+const Header = ({ handleButton }) => {
 
     const sections = {
         spanish: ["Inicio", "Projectos", "Contacto"],
@@ -23,7 +23,10 @@ const Header = ({handleButton}) => {
             </nav>
             <div className="utils">
                 <h3>English Version</h3>
-                <ButtonSwitch handleButton={handleButton} />
+                <div className="utilsAnimation">
+                    <h3>Animaciones</h3>
+                    <ButtonSwitch handleButton={handleButton} />
+                </div>
             </div>
             <div className="diagonal diagonalRight"></div>
         </header>

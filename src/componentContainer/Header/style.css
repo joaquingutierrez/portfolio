@@ -12,20 +12,26 @@
     margin: auto;
 }
 .navbar {
-    grid-area: "nav_area";
+    grid-area: nav_area;
     display: flex;
     justify-content: space-between;
 }
 
 .logo {
-    grid-area: "logo_area";
+    grid-area: logo_area;
 }
 .utils {
-    grid-area: "utils_area";
+    grid-area: utils_area;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     z-index: 5;
+}
+.utilsAnimation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .diagonal {
