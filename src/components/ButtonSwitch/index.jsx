@@ -2,14 +2,14 @@ import React from "react";
 
 import "./style.css"
 
-const ButtonSwitch = ({handleButton}) => {
+const ButtonSwitch = ({ handleButton }) => {
 
-    
+
 
     return (
-        <label onChange={handleButton} htmlFor="switch">
-            <input type="checkbox" name="switch" id="switch" />
-            <span></span>
+        <label className="switch" onChange={handleButton}>
+            <input type="checkbox" className="checkbox" />
+            <span className="textSlider"></span>
         </label>
     )
 }

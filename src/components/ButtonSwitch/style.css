@@ -1,0 +1,23 @@
+.switch {
+    position: relative;
+    width: 150px;
+    height: 70px;
+    border: 1px solid red;
+}
+.checkbox {
+    display: none;
+}
+.textSlider {
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.textSlider:before{
+    content: "OFF"
+}
+
+.checkbox:checked~.textSlider:before {
+    content: "ON"
+}

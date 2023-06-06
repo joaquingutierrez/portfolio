@@ -20,7 +20,6 @@ const Matrix = () => {
         mainCanvas.width = canvasWidth.current;
         mainCanvas.height = canvasHeight.current;
 
-        console.log("matrix", canvasWidth)
 
         const fontSize = 10
         const columns = mainCanvas.width / fontSize
