@@ -37,25 +37,28 @@ const Matrix = () => {
         const draw = () => {
 
             //área de dibujo
-            ctx.fillStyle = 'rgba(16, 20, 18, 0.05)';
-            ctx.fillRect(0, 0, mainCanvas.width, mainCanvas.height);
+            /*             ctx.fillStyle = 'rgba(16, 20, 18, 1)';
+                        ctx.fillRect(0, 0, mainCanvas.width, mainCanvas.height); */
 
             //estilo de las letras
             ctx.fillStyle = '#0F0'; // Color de las letras (verde)
             ctx.font = `${fontSize}px arial`;
-
+            
             for (let i = 0; i < drops.length; i++) {
+                let posicionVertical = drops[i] * fontSize
+                console.log(posicionVertical)
+                let posicionHorizontal = i * fontSize
                 const text = chars[Math.floor(Math.random() * chars.length)]; // Caracter aleatorio
-                ctx.fillText(text, i * fontSize, drops[i] * fontSize); //dibujando el caracter aleatorio en x, y
+                ctx.fillText(text, posicionHorizontal, posicionVertical); //dibujando el caracter aleatorio en x, y
+                
+                drops[i]++ //Para que vayan cayendo
+
+                ctx.clearRect(posicionHorizontal, posicionVertical - 10 * fontSize, 1 * fontSize, 1 * fontSize); //Borra el elemento que esta 10 posiciones arriba de drops[i]
+                
+
                 // Reiniciar la posición de la letra si ha llegado al fondo de la pantalla
                 if (drops[i] * fontSize > mainCanvas.height && Math.random() > 0.999) {
                     drops[i] = 0;
-                }
-
-                drops[i]++
-
-                if (drops[i] > 50) {
-                    ctx.fillText(text, 0, drops[i] * fontSize)
                 }
 
             }
