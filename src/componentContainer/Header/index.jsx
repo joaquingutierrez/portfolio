@@ -13,7 +13,7 @@ const Header = ({ handleButton }) => {
 
 
     return (
-        <header className="headerContainer">
+        <header className="headerContainer boxShadow">
             <div className="diagonal diagonalLeft"></div>
             <h3 className="logo">LOGO</h3>
             <nav className="navbar">
