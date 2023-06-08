@@ -21,11 +21,11 @@ const Matrix = () => {
         mainCanvas.height = canvasHeight.current;
 
 
-        const fontSize = 10
+        const fontSize = 16
         const columns = mainCanvas.width / fontSize
 
         //caracteres que van a aparecer
-        const chars = "01"
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
         //creando el array
         const drops = []
@@ -36,28 +36,37 @@ const Matrix = () => {
         //funcion que va a dibujar
         const draw = () => {
 
-            //área de dibujo
-            /*             ctx.fillStyle = 'rgba(16, 20, 18, 1)';
-                        ctx.fillRect(0, 0, mainCanvas.width, mainCanvas.height); */
-
             //estilo de las letras
-            ctx.fillStyle = '#0F0'; // Color de las letras (verde)
             ctx.font = `${fontSize}px arial`;
             
             for (let i = 0; i < drops.length; i++) {
+
                 let posicionVertical = drops[i] * fontSize
-                console.log(posicionVertical)
                 let posicionHorizontal = i * fontSize
+                let largoDeLaCadena = 40
+
+
+                ctx.fillStyle = '#fff'; // Color de la primera letra
                 const text = chars[Math.floor(Math.random() * chars.length)]; // Caracter aleatorio
                 ctx.fillText(text, posicionHorizontal, posicionVertical); //dibujando el caracter aleatorio en x, y
+                ctx.clearRect(posicionHorizontal, posicionVertical - 2 * fontSize, 1 * fontSize, 1 * fontSize); //Borra el elemento que esta largoDeLaCadena posiciones arriba de drops[i]
                 
+                let alpha = 1 //Opacidad de las letras subsecuentes
+                for (let j = 1; j < largoDeLaCadena; j++) {
+                    ctx.fillStyle = `rgba(0, 128, 0, ${alpha})`;
+                    alpha = alpha / 1.05
+                    const text = chars[Math.floor(Math.random() * chars.length)];// Caracter aleatorio
+                    ctx.fillText(text, posicionHorizontal, posicionVertical - j * fontSize); //dibujando el caracter aleatorio en i, j
+                    ctx.clearRect(posicionHorizontal, posicionVertical - (j + 2) * fontSize, 1 * fontSize, 1 * fontSize); //Borra el elemento que esta ecima de la posicion j
+                }
+                
+
                 drops[i]++ //Para que vayan cayendo
 
-                ctx.clearRect(posicionHorizontal, posicionVertical - 10 * fontSize, 1 * fontSize, 1 * fontSize); //Borra el elemento que esta 10 posiciones arriba de drops[i]
                 
 
                 // Reiniciar la posición de la letra si ha llegado al fondo de la pantalla
-                if (drops[i] * fontSize > mainCanvas.height && Math.random() > 0.999) {
+                if (posicionVertical > mainCanvas.height && Math.random() > 0.999) {
                     drops[i] = 0;
                 }
 
