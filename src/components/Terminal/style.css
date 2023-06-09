@@ -1,0 +1,75 @@
+.terminal {
+    background-color: #fff;
+    margin-right: 100px;
+    border-radius: 1%;
+    animation: 15s ease-in-out infinite floating;
+}
+.terminalNav {
+    position: relative;
+}
+.actionButtonsTerminal {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+}
+.actionButtonsTerminal div {
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+}
+.closeButtonTerminal {
+    background-color: red;
+}
+.maxButtonTerminal {
+    background-color: orange;
+}
+.minButtonTerminal {
+    background-color: green;
+}
+.closeButtonTerminal:hover {
+    opacity: 0.7;
+}
+.maxButtonTerminal:hover {
+    opacity: 0.7;
+}
+.minButtonTerminal:hover {
+    opacity: 0.7;
+}
+.terminalTitle {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+    
+}
+.infoTerminal {
+    border: 1px solid #008000;
+    padding: 16px;
+    background-color: black;
+    border-radius:0 0 1% 1%;
+    white-space: pre-wrap;
+}
+.infoTerminal h2::before {
+    content: ">>";
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, -20px);
+    }
+    25% {
+        transform: translate(-20px, 0px);
+    }
+    50% {
+        transform: translate(0px, 20px);
+    }
+    75% {
+        transform: translate(20px, 0px);
+    }
+    100% {
+        transform: translate(0px, -20px);
+    }
+}
