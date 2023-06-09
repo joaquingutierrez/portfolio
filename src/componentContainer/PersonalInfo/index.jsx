@@ -1,7 +1,7 @@
 import React from "react";
 
 import imgCV from "../../img/fotoCV.jpg"
-import {Terminal} from "../../components"
+import {Separator, Terminal} from "../../components"
 import "./style.css"
 
 
@@ -29,6 +29,7 @@ const PersonalInfo = () => {
 
     return (
         <>
+        <Separator />
             <section className="personalInfoContainer">
                 <Terminal text={personal_text.spanish} />
                 <div className="imgContainerCV">

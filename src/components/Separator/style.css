@@ -1,0 +1,9 @@
+.separatorContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.separator {
+    width: 30%;
+    height: 10px;
+    background-color: green;
+}
