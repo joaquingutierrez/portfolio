@@ -1,9 +1,11 @@
 .separatorContainer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
 }
 .separator {
-    width: 30%;
-    height: 10px;
+    width: 33%;
+    height: 1px;
     background-color: green;
 }

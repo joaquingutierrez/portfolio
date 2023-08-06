@@ -1,6 +1,5 @@
 .personalInfoContainer {
     display: flex;
-    margin: 150px 0;
     perspective: 700px;
     padding: 50px 0;
 }

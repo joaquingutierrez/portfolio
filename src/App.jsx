@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import {Header, PersonalInfo, Projects, Footer} from "./componentContainer"
+import { Separator } from './components';
 import Matrix from './components/Matrix';
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
     <>
       <Header handleButton={handleAnimation}/>
       {animation && <Matrix />}
+      <Separator title="Inicio" />
       <PersonalInfo />
+      <Separator title="Proyectos" />
       <Projects />
       <Footer />
     </>
