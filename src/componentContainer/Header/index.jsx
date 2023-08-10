@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./style.css"
-import { ButtonSwitch } from "../../components";
+import { Options } from "../../components";
 
 
-const Header = ({ handleButton }) => {
+const Header = ({ handleLanguage, handleAnimation, handleLightDark }) => {
 
     const sections = {
         spanish: ["Inicio", "Projectos", "Contacto"],
@@ -24,8 +24,7 @@ const Header = ({ handleButton }) => {
             <div className="utils">
                 <h3>LOGO</h3>
                 <div className="utilsAnimation">
-                    <h3>Opciones</h3>
-                    <ButtonSwitch handleButton={handleButton} />
+                    <Options handleLanguage={handleLanguage} handleAnimation={handleAnimation} handleLightDark={handleLightDark} />
                 </div>
             </div>
             <div className="diagonal diagonalRight"></div>

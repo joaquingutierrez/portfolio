@@ -2,23 +2,18 @@ import React from "react";
 
 import "./style.css"
 
-const ButtonSwitch = ({ handleButton }) => {
+const ButtonSwitch = ({ handleButton, textOn = "ON", textOff = "OFF" }) => {
 
-    const animationSwitch = () => {
-        handleButton()
-        /*         const checkboxSwitch = document.getElementById("checkboxSwitch")
-                checkboxSwitch.classList.add("animationForSwitchOn") */
-    }
 
     return (
-        <label className="switch" onChange={animationSwitch}>
+        <label className="switch" onChange={handleButton}>
             <div className="checkboxSwitch">
                 <input type="checkbox" className="checkbox" />
                 <div className="switchONContainer">
-                    <span className="textSlider switchON">ON</span>
+                    <span className="textSlider switchON">{textOn}</span>
                 </div>
                 <div className="switchOFFContainer">
-                    <span className="textSlider switchOFF">OFF</span>
+                    <span className="textSlider switchOFF">{textOff}</span>
                 </div>
             </div>
         </label>

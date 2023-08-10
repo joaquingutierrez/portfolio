@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import {Header, PersonalInfo, Projects, Footer} from "./componentContainer"
+import { Header, PersonalInfo, Projects, Footer } from "./componentContainer"
 import { Separator } from './components';
 import Matrix from './components/Matrix';
 
@@ -11,11 +11,16 @@ function App() {
   const handleAnimation = () => {
     setAnimation(!animation)
   }
+  const handleLanguage = () => {
 
+  }
+  const handleLightDark = () => {
+
+  }
 
   return (
     <>
-      <Header handleButton={handleAnimation}/>
+      <Header handleLanguage={handleLanguage} handleAnimation={handleAnimation} handleLightDark={handleLightDark} />
       {animation && <Matrix />}
       <Separator title="Inicio" />
       <PersonalInfo />
