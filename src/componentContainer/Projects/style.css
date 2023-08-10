@@ -8,11 +8,19 @@
 
 .cardContainer {
     width: 100%;
-    /* box-shadow: 0px 0px 45px 15px rgba(0,128,0,0.77); */
+    box-shadow: 0px 0px 30px 10px rgba(0,128,0,0.77);
     background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 80vh;
+    overflow: hidden;
+}
+.border-radius-img-right {
+    border-radius: 20px 10px 0 100px;
+}
+.border-radius-img-left {
+    border-radius: 10px 20px 100px 0;
 }
 .row-reverse {
     flex-direction: row-reverse;
@@ -21,20 +29,28 @@
 .infoProjectContainer {
     margin: 0 5%;
     transition: opacity 1s ease-in-out;
+    transition-delay: 0.35s;
+    width: 33.3%;
 }
 .imgProjectContainer {
     width: 60%;
-    height: min-content;
+    height: 100%;
+    overflow: hidden;
 }
 .imgProjectAnimation-right {
     animation: initialPosition-right 0.4s ease-in-out;
 }
-.imgProjectContainer a {
-    display: inline-block;
-    height: fit-content;
+.imgProjectAnimation-left {
+    animation: initialPosition-left 0.4s ease-in-out;
 }
 .imgProjectContainer a img {
-    width: 100%;
+    height: 100%;
+    transform: translateX(-25%);
+}
+
+.projectTitle {
+    font-size: 1.8rem;
+    border-bottom: 2px solid green;
 }
 
 .techsContainer {
@@ -42,11 +58,44 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 20px 20px;
+    margin: 50px 0;
 }
+.techsContainer p {
+    border: 1px dashed green;
+    padding: 10px 20px;
+    border-radius: 40px 20px;
+    margin: 0;
+}
+.link {
+    display: inline-block;
+    text-decoration: none;
+    color: green;
+    transition: 0.2s ease-in-out;
+}
+.link:hover {
+    transform: scale(1.2);
+}
+.linkButton {
+    cursor: pointer;
+    background-color: green;
+    padding: 10px 20px;
+    border-radius: 40px 20px;
+    border: 0;
+}
+
 
 @keyframes initialPosition-right {
     0% {
         transform: translateX(300%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes initialPosition-left {
+    0% {
+        transform: translateX(-300%);
     }
     100% {
         transform: translateX(0);

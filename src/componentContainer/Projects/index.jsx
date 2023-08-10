@@ -11,17 +11,17 @@ const Projects = () => {
         return (
             data.map((item, index) => {
                 return (
-                    <div key={item.name} className={index % 2 === 0 ? "cardContainer" : "cardContainer row-reverse"} id={"project-" + index} >
-                        <div className="infoProjectContainer">
-                            <h3>{item.name}</h3>
+                    <div key={item.name} className={index % 2 === 0 ? "cardContainer border-radius-img-right" : "cardContainer row-reverse border-radius-img-left"} id={"project-" + index} >
+                        <div className="infoProjectContainer invisible">
+                            <h3 className="projectTitle">{item.name}</h3>
                             <div className="techsContainer">
                                 {item.technology.map(tec => {
                                     return <p key={tec}>{tec}</p>
                                 })}
                             </div>
-                            <a href={item.linkToRepo} target="_blank" rel="noreferrer"><h4>Link to repo</h4></a>
+                            <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><button className="linkButton">Link to repo</button></a>
                         </div>
-                        <div className="imgProjectContainer initialPosition-right">
+                        <div className="imgProjectContainer" project-img-ref={index}>
                             <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt="Modificar despues" /></a>
                         </div>
                     </div>
@@ -44,11 +44,17 @@ const Projects = () => {
                 if (entry.isIntersecting) {
                     projectImgContainer.classList.remove("invisible")
                     projectTextContainer.classList.remove("invisible")
-                    return projectImgContainer.classList.add("imgProjectAnimation-right")
+                    const projectNumber = projectImgContainer.getAttribute("project-img-ref")
+                    if (projectNumber % 2 === 0) {
+                        return projectImgContainer.classList.add("imgProjectAnimation-right")
+                    }
+                        return projectImgContainer.classList.add("imgProjectAnimation-left")
                 }
                 projectImgContainer.classList.add("invisible")
                 projectTextContainer.classList.add("invisible")
                 projectImgContainer.classList.remove("imgProjectAnimation-right")
+                projectImgContainer.classList.remove("imgProjectAnimation-left")
+
             })
         }
 

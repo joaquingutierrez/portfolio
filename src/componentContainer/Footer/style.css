@@ -2,11 +2,16 @@
     min-height: 300px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 .logoFooterContainer {
     border: 1px solid #008000;
     padding: 32px 150px;
     border-radius: 20%;
     background-color: black;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+.logoFooterContainer:hover {
+    transform: scale(1.1);
 }
