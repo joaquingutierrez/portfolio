@@ -22,9 +22,9 @@ const Header = ({ handleButton }) => {
                 })}
             </nav>
             <div className="utils">
-                <h3>English Version</h3>
+                <h3>LOGO</h3>
                 <div className="utilsAnimation">
-                    <h3>Animaciones</h3>
+                    <h3>Opciones</h3>
                     <ButtonSwitch handleButton={handleButton} />
                 </div>
             </div>

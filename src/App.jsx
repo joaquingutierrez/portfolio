@@ -21,6 +21,7 @@ function App() {
       <PersonalInfo />
       <Separator title="Proyectos" />
       <Projects />
+      <Separator title="Contacto" />
       <Footer />
     </>
   );
