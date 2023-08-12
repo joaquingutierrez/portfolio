@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./style.css"
 import ButtonSwitch from "../ButtonSwitch";
 import CustomButton from "../CustomButton";
+import { SettingsContext } from "../../context";
 
 const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
 
+    const { lightMode } = useContext(SettingsContext)
 
     const openMenu = () => {
         const myDialog = document.getElementById("myDialog")
@@ -15,7 +17,7 @@ const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
     return (
         <>
             <CustomButton title="Options" handleButton={openMenu} />
-            <dialog id="myDialog">
+            <dialog id="myDialog" className={`${lightMode ? "myDialog-light" : "myDialog-dark"}`}>
                 <form method="dialog">
                     <div className="option">
                         <h3>Language</h3>
@@ -27,9 +29,9 @@ const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
                     </div>
                     <div className="option">
                         <h3>Mode</h3>
-                        <ButtonSwitch handleButton={handleLightDark} textOn="Dark" textOff="Light" />
+                        <ButtonSwitch handleButton={handleLightDark} textOn="Light" textOff="Dark" />
                     </div>
-                    <button className="modalButton">Cerrar</button>
+                    <CustomButton title="Cerrar" />
                 </form>
             </dialog>
         </>

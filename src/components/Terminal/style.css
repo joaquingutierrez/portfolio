@@ -1,8 +1,13 @@
 .terminal {
-    background-color: #fff;
     margin-right: 100px;
     border-radius: 1%;
     animation: 30s ease-in-out infinite floating;
+}
+.terminal-dark {
+    background-color: #fff;
+}
+.terminal-light {
+    background-color: #000;
 }
 .terminalNav {
     position: relative;
@@ -46,11 +51,17 @@
     
 }
 .infoTerminal {
-    border: 1px solid #008000;
     padding: 16px;
-    background-color: black;
     border-radius:0 0 1% 1%;
     white-space: pre-wrap;
+}
+.infoTerminal-dark {
+    border: 1px solid var(--dark-color-primary);
+    background-color: var(--dark-color-tertiary);
+}
+.infoTerminal-light {
+    border: 1px solid var(--light-color-primary);
+    background-color: var(--light-color-tertiary);
 }
 .infoTerminal h2::before {
     content: ">>";

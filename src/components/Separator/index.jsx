@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import keyboard from "../../img/keyboard.png"
 
 import "./style.css"
+import { SettingsContext } from "../../context";
 
 const Separator = ({title}) => {
+
+    const {lightMode} = useContext(SettingsContext)
+
     return (
         <div className="separatorContainer">
-            <div className="separator"></div>
+            <div className={`separator ${lightMode ? "separator-light" : "separator-dark"}`}></div>
             <img src={keyboard} alt="keyboard" />
             <h2>{title}</h2>
             <img src={keyboard} alt="keyboard" />
-            <div className="separator"></div>
+            <div className={`separator ${lightMode ? "separator-light" : "separator-dark"}`}></div>
         </div>
     )
 }

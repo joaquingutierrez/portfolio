@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    margin: auto;
 }
 .logoFooterContainer {
     border: 1px solid #008000;
@@ -10,6 +11,14 @@
     background-color: black;
     transition: 0.3s ease-in-out;
     margin-bottom: 30px;
+}
+.logoFooterContainer-dark {
+    border: 1px solid var(--dark-color-primary);
+    background-color: var(--dark-color-tertiary);
+}
+.logoFooterContainer-light {
+    border: 1px solid var(--light-color-primary);
+    background-color: var(--light-color-tertiary);
 }
 .logoFooterContainer:hover {
     transform: scale(1.1);

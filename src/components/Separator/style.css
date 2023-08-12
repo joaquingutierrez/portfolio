@@ -2,10 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 100px 0;
+    margin: 100px auto;
 }
 .separator {
     width: 33%;
     height: 1px;
-    background-color: green;
+}
+.separator-dark {
+    background-color: var(--dark-color-primary);
+}
+.separator-light {
+    background-color: var(--light-color-primary);
 }

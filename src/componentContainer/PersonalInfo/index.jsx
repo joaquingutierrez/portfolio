@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import imgCV from "../../img/fotoCV.jpg"
 import { Terminal } from "../../components"
 import "./style.css"
+import { SettingsContext } from "../../context";
 
 
 
 const PersonalInfo = () => {
+
+    const {lightMode} = useContext(SettingsContext)
 
     const personal_text = {
         spanish: {
@@ -31,7 +34,7 @@ const PersonalInfo = () => {
         <>
             <section className="personalInfoContainer">
                 <Terminal text={personal_text.spanish} />
-                <div className="imgContainerCV">
+                <div className={`imgContainerCV  ${lightMode ? "imgContainerCV-light" : "imgContainerCV-dark"}`}>
                     <img src={imgCV} alt="Imagen de perfil" />
                 </div>
             </section>

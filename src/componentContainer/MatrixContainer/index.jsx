@@ -5,11 +5,11 @@ import { Matrix } from "../../components"
 
 const MatrixContainer = () => {
 
-    const {animation} = useContext(SettingsContext)
+    const {animation, lightMode} = useContext(SettingsContext)
 
     return (
         <>
-            {animation && <Matrix />}
+            {animation && <Matrix lightMode={lightMode} />}
         </>
     )
 }

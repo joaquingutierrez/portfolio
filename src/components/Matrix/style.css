@@ -1,8 +1,14 @@
 .matrix-effect {
-    background-color: rgb(16, 20, 18);
-    z-index: -1;
-    position: absolute;
-    left: -6px;
-    top: 0;
-  }
-  
+  background-color: rgb(16, 20, 18);
+  z-index: -1;
+  position: absolute;
+  left: -6px;
+  top: 0;
+}
+
+.matrix-effect-dark {
+  background-color: var(--dark-color-secondary);
+}
+.matrix-effect-light {
+  background-color: var(--light-color-secondary);
+}

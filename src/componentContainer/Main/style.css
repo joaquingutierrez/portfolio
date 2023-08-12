@@ -1,0 +1,12 @@
+.main-dark {
+    background-color: var(--dark-color-secondary);
+    color: var(--dark-color-primary);
+}
+.main-light {
+    background-color: var(--light-color-secondary);
+    color: var(--light-color-primary);
+}
+
+.mainContent * {
+    max-width: 1140px;
+}

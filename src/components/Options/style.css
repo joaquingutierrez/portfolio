@@ -1,23 +1,22 @@
-:modal {
-    background-color: black;
-    border: 2px solid burlywood;
+#myDialog {
     border-radius: 5px;
-    color: green;
+}
+#myDialog form {
+    margin: auto;
+}
+.myDialog-dark {
+    color: var(--dark-color-primary);
+    background-color: var(--dark-color-tertiary);
+    border: 2px solid var(--light-color-secondary);
+}
+.myDialog-light {
+    color: var(--light-color-primary);
+    background-color: var(--light-color-tertiary);
+    border: 2px solid var(--dark-color-secondary);
 }
 .option {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-}
-.modalButton {
-    cursor: pointer;
-    background-color: green;
-    padding: 10px 20px;
-    border-radius: 40px 20px;
-    border: 0;
-    transition: 0.2s ease-in-out;
-}
-.modalButton:hover {
-    transform: scale(1.1);
 }

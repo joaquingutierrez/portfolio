@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './style.css';
 
-const Matrix = () => {
+const Matrix = ({lightMode}) => {
 
 
     let canvasWidth = useRef(0)
@@ -86,7 +86,7 @@ const Matrix = () => {
 
 
     return (
-        <canvas id='canvasMatrix' className='matrix-effect'></canvas>
+        <canvas id='canvasMatrix' className={`matrix-effect ${lightMode ? "matrix-effect-light" : "matrix-effect-dark"}`}></canvas>
     )
 };
 

@@ -3,13 +3,19 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "logo_area nav_area utils_area";
-    border-bottom: 3px solid #008000;
     border-radius: 0px 0px 4px 0px;
     position: relative;
-    background-color: black;
     z-index: 10;
     width: 800px;
     margin: auto;
+}
+.headerContainer-dark {
+    background-color: var(--dark-color-tertiary);
+    border-bottom: 3px solid var(--dark-color-primary);
+}
+.headerContainer-light {
+    background-color: var(--light-color-tertiary);
+    border-bottom: 3px solid var(--light-color-primary);
 }
 .navbar {
     grid-area: nav_area;
@@ -32,6 +38,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    margin: 10px;
 }
 
 .diagonal {
@@ -47,16 +54,26 @@
 .diagonalLeft {
     left: 0px;
     transform: rotate(-45deg);
-    border-left: 3px solid #008000;
     transform-origin: bottom left;
+}
+.diagonalLeft-dark {
+    border-left: 3px solid var(--dark-color-primary);
+}
+.diagonalLeft-light {
+    border-left: 3px solid var(--light-color-primary);
 }
 .diagonalRight {
     right: 2px;
     transform: rotate(45deg);
-    border-right: 3px solid #008000;
     transform-origin: bottom right;
 }
-
-.boxShadow {
-    box-shadow: 0px 0px 45px 15px rgba(0,128,0,0.77);
+.diagonalRight-dark {
+    border-right: 3px solid var(--dark-color-primary);
 }
+.diagonalRight-light {
+    border-right: 3px solid var(--light-color-primary);
+}
+
+/* .boxShadow {
+    box-shadow: 0px 0px 45px 15px #008000c4;
+} */

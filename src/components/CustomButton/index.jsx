@@ -1,8 +1,14 @@
-import "./style.css"
+import { useContext } from "react"
 
-const CustomButton = ({title, handleButton}) => {
+import "./style.css"
+import { SettingsContext } from "../../context"
+
+const CustomButton = ({ title, handleButton }) => {
+
+    const { lightMode } = useContext(SettingsContext)
+
     return (
-        <button className="customButton" onClick={handleButton}>{title}</button>
+        <button className={`customButton ${lightMode ? "customButton-light" : "customButton-dark"}`} onClick={handleButton}>{title}</button>
     )
 }
 

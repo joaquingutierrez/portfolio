@@ -1,25 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { portfolio } from "../../data/portfolio"
 import "./style.css"
+import { SettingsContext } from "../../context"
+import CustomButton from "../../components/CustomButton"
 
 
 const Projects = () => {
 
+    const { lightMode } = useContext(SettingsContext)
 
     const render = (data) => {
         return (
             data.map((item, index) => {
                 return (
-                    <div key={item.name} className={index % 2 === 0 ? "cardContainer border-radius-img-right" : "cardContainer row-reverse border-radius-img-left"} id={"project-" + index} >
+                    <div key={item.name} className={`cardContainer ${index % 2 === 0 ? "border-radius-img-right" : "row-reverse border-radius-img-left"} ${lightMode ? "cardContainer-light" : "cardContainer-dark"}`} id={"project-" + index} >
                         <div className="infoProjectContainer invisible">
-                            <h3 className="projectTitle">{item.name}</h3>
-                            <div className="techsContainer">
+                            <h3 className={`projectTitle ${lightMode ? "projectTitle-light" : "projectTitle-dark"}`}>{item.name}</h3>
+                            <div className={`techsContainer ${lightMode ? "techsContainer-light" : "techsContainer-dark"}`}>
                                 {item.technology.map(tec => {
                                     return <p key={tec}>{tec}</p>
                                 })}
                             </div>
-                            <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><button className="linkButton">Link to repo</button></a>
+                            <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><CustomButton title="Link to Repo"/></a>
                         </div>
                         <div className="imgProjectContainer" project-img-ref={index}>
                             <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt="Modificar despues" /></a>
@@ -48,7 +51,7 @@ const Projects = () => {
                     if (projectNumber % 2 === 0) {
                         return projectImgContainer.classList.add("imgProjectAnimation-right")
                     }
-                        return projectImgContainer.classList.add("imgProjectAnimation-left")
+                    return projectImgContainer.classList.add("imgProjectAnimation-left")
                 }
                 projectImgContainer.classList.add("invisible")
                 projectTextContainer.classList.add("invisible")

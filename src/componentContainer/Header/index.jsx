@@ -7,7 +7,7 @@ import { SettingsContext } from "../../context";
 
 const Header = () => {
 
-    const { changeAnimationState, changeEngLanguageState, changeLightModeState } = React.useContext(SettingsContext)
+    const { changeAnimationState, changeEngLanguageState, changeLightModeState, lightMode } = React.useContext(SettingsContext)
 
 
     const sections = {
@@ -17,8 +17,8 @@ const Header = () => {
 
 
     return (
-        <header className="headerContainer boxShadow">
-            <div className="diagonal diagonalLeft"></div>
+        <header className={`headerContainer boxShadow ${lightMode ? "headerContainer-light" : "headerContainer-dark"}`}>
+            <div className={`diagonal diagonalLeft ${lightMode ? "diagonalLeft-light" : "diagonalLeft-dark"}`}></div>
             <h3 className="logo">LOGO</h3>
             <nav className="navbar">
                 {sections.spanish.map(item => {
@@ -31,7 +31,7 @@ const Header = () => {
                     <Options handleLanguage={changeEngLanguageState} handleAnimation={changeAnimationState} handleLightDark={changeLightModeState} />
                 </div>
             </div>
-            <div className="diagonal diagonalRight"></div>
+            <div className={`diagonal diagonalRight ${lightMode ? "diagonalRight-light" : "diagonalRight-dark"}`}></div>
         </header>
     )
 

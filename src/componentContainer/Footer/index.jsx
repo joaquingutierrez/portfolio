@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./style.css"
 import githubLogo from "../../img/signo-de-github.png"
 import emailLogo from "../../img/email.png"
 import linkedinLogo from "../../img/logotipo-de-linkedin.png"
+import { SettingsContext } from "../../context"
 
 
 const Footer = () => {
+
+    const { lightMode } = useContext(SettingsContext)
 
     const contactInfo = {
         github: "https://github.com/joaquingutierrez",
@@ -17,17 +20,17 @@ const Footer = () => {
     return (
         <footer id="footer">
             <a href={contactInfo.github} target="_blank" rel="noreferrer">
-                <div className="logoFooterContainer">
+                <div className={`logoFooterContainer ${lightMode ? "logoFooterContainer-light" : "logoFooterContainer-dark"}`}>
                     <img src={githubLogo} alt="" />
                 </div>
             </a>
             <a href={contactInfo.email} target="_blank" rel="noreferrer">
-                <div className="logoFooterContainer">
+                <div className={`logoFooterContainer ${lightMode ? "logoFooterContainer-light" : "logoFooterContainer-dark"}`}>
                     <img src={emailLogo} alt="" />
                 </div>
             </a>
             <a href={contactInfo.linkedin} target="_blank" rel="noreferrer">
-                <div className="logoFooterContainer">
+                <div className={`logoFooterContainer ${lightMode ? "logoFooterContainer-light" : "logoFooterContainer-dark"}`}>
                     <img src={linkedinLogo} alt="" />
                 </div>
             </a>

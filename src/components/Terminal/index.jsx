@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import "./style.css"
+import { SettingsContext } from "../../context"
 
 
 const Terminal = ({ text }) => {
+
+    const { lightMode } = useContext(SettingsContext)
+
     return (
-        <div className="terminal">
+        <div className={`terminal ${lightMode ? "terminal-light" : "terminal-dark"}`}>
             <div className="terminalNav">
                 <div className="actionButtonsTerminal">
                     <div className="closeButtonTerminal"></div>
@@ -14,7 +18,7 @@ const Terminal = ({ text }) => {
                 </div>
                 <h2 className="terminalTitle">Terminal</h2>
             </div>
-            <div className="infoTerminal">
+            <div className={`infoTerminal ${lightMode ? "infoTerminal-light" : "infoTerminal-dark"}`}>
                 <h2>{text.title}</h2>
                 <h3>{text.subtitle}</h3>
                 <p>{text.p}</p>
