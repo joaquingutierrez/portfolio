@@ -2,9 +2,13 @@ import React from "react";
 
 import "./style.css"
 import { Options } from "../../components";
+import { SettingsContext } from "../../context";
 
 
-const Header = ({ handleLanguage, handleAnimation, handleLightDark }) => {
+const Header = () => {
+
+    const { changeAnimationState, changeEngLanguageState, changeLightModeState } = React.useContext(SettingsContext)
+
 
     const sections = {
         spanish: ["Inicio", "Projectos", "Contacto"],
@@ -24,7 +28,7 @@ const Header = ({ handleLanguage, handleAnimation, handleLightDark }) => {
             <div className="utils">
                 <h3>LOGO</h3>
                 <div className="utilsAnimation">
-                    <Options handleLanguage={handleLanguage} handleAnimation={handleAnimation} handleLightDark={handleLightDark} />
+                    <Options handleLanguage={changeEngLanguageState} handleAnimation={changeAnimationState} handleLightDark={changeLightModeState} />
                 </div>
             </div>
             <div className="diagonal diagonalRight"></div>
