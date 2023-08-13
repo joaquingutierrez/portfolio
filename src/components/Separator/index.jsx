@@ -9,7 +9,7 @@ const Separator = ({title}) => {
     const {lightMode} = useContext(SettingsContext)
 
     return (
-        <div className="separatorContainer">
+        <div className="separatorContainer" id={title}>
             <div className={`separator ${lightMode ? "separator-light" : "separator-dark"}`}></div>
             <img src={keyboard} alt="keyboard" />
             <h2>{title}</h2>

@@ -5,7 +5,7 @@
     grid-template-areas: "logo_area nav_area utils_area";
     border-radius: 0px 0px 4px 0px;
     position: relative;
-    z-index: 10;
+    z-index: 10!important;
     width: 800px;
     margin: auto;
 }
@@ -64,6 +64,7 @@
 }
 .diagonalRight {
     right: 2px;
+    z-index: -1!important;
     transform: rotate(45deg);
     transform-origin: bottom right;
 }
