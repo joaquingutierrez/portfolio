@@ -3,8 +3,6 @@ import React from "react";
 import "./style.css"
 
 const ButtonSwitch = ({activated = false, handleButton, textOn = "ON", textOff = "OFF" }) => {
-    console.log("activo?",activated)
-    console.log("tipo?",typeof activated)
 
     return (
         <label className="switch">

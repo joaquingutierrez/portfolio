@@ -14,8 +14,6 @@ const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
         myDialog.showModal()
     }
 
-    console.log(lightMode)
-
     return (
         <>
             <CustomButton title={engLanguage ? "Settings" : "Configuraciones"} handleButton={openMenu} />
