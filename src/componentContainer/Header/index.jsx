@@ -17,6 +17,11 @@ const Header = () => {
 
     const smoothScroll = (target) => {
         const element = document.querySelector(target)
+        if (!element) {
+            return document.querySelector("#root").scrollIntoView({
+                behavior: "smooth"
+            })
+        }
         element.scrollIntoView({
             behavior: "smooth"
         })
@@ -56,6 +61,10 @@ const Header = () => {
                 </div>
             </div>
             <div className={`diagonal diagonalRight ${lightMode ? "diagonalRight-light" : "diagonalRight-dark"}`}></div>
+                <div className={`goUpButton ${lightMode ? "goUpButton-light" : "goUpButton-dark"}`} onClick={handleNavLink}>
+                    <div className={`arrow ${lightMode ? "arrow-light" : "arrow-dark"}`}></div>
+                    <div className={`arrow-stem ${lightMode ? "arrow-stem-light" : "arrow-stem-dark"}`}></div>
+                </div>
         </header>
     )
 
