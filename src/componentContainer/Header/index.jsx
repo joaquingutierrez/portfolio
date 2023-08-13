@@ -15,25 +15,39 @@ const Header = () => {
         english: ["Home", "Projects", "Contact"]
     }
 
+    const smoothScroll = (target) => {
+        const element = document.querySelector(target)
+        element.scrollIntoView({
+            behavior: "smooth"
+        })
+    }
+
+    const handleNavLink = (e) => {
+        e.preventDefault()
+        smoothScroll(e.target.getAttribute("href"))
+    }
+
 
     return (
         <header className={`headerContainer boxShadow ${lightMode ? "headerContainer-light" : "headerContainer-dark"}`}>
             <div className={`diagonal diagonalLeft ${lightMode ? "diagonalLeft-light" : "diagonalLeft-dark"}`}></div>
             <h3 className="logo">LOGO</h3>
             <nav className="navbar">
-                {engLanguage ?
-                    (
-                        sections.english.map(item => {
-                            return <h3 key={item}>{item}</h3>
-                        })
-                    )
-                    :
-                    (
-                        sections.spanish.map(item => {
-                            return <h3 key={item}>{item}</h3>
-
-                        })
-                    )}
+                <ul className="navLinks">
+                    {engLanguage ?
+                        (
+                            sections.english.map(item => {
+                                return <li key={item}><a onClick={handleNavLink} href={"#" + item}>{item}</a></li>
+                            })
+                        )
+                        :
+                        (
+                            sections.spanish.map(item => {
+                                return <li key={item}><a onClick={handleNavLink} href={"#" + item}>{item}</a></li>
+                            })
+                        )
+                    }
+                </ul>
             </nav>
             <div className="utils">
                 <h3>LOGO</h3>
