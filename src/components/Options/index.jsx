@@ -7,7 +7,7 @@ import { SettingsContext } from "../../context";
 
 const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
 
-    const { lightMode } = useContext(SettingsContext)
+    const { lightMode, engLanguage } = useContext(SettingsContext)
 
     const openMenu = () => {
         const myDialog = document.getElementById("myDialog")
@@ -16,7 +16,7 @@ const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
 
     return (
         <>
-            <CustomButton title="Options" handleButton={openMenu} />
+            <CustomButton title={engLanguage ? "Settings" : "Configuraciones"} handleButton={openMenu} />
             <dialog id="myDialog" className={`${lightMode ? "myDialog-light" : "myDialog-dark"}`}>
                 <form method="dialog">
                     <div className="option">

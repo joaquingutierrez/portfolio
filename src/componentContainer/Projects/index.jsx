@@ -8,7 +8,7 @@ import CustomButton from "../../components/CustomButton"
 
 const Projects = () => {
 
-    const { lightMode } = useContext(SettingsContext)
+    const { lightMode, engLanguage } = useContext(SettingsContext)
 
     const render = (data) => {
         return (
@@ -22,7 +22,7 @@ const Projects = () => {
                                     return <p key={tec}>{tec}</p>
                                 })}
                             </div>
-                            <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><CustomButton title="Link to Repo"/></a>
+                            <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><CustomButton title={engLanguage ? "Go to Repo" : "Ir al Repo"} /></a>
                         </div>
                         <div className="imgProjectContainer" project-img-ref={index}>
                             <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt="Modificar despues" /></a>

@@ -7,11 +7,11 @@ import { SettingsContext } from "../../context";
 
 const Header = () => {
 
-    const { changeAnimationState, changeEngLanguageState, changeLightModeState, lightMode } = React.useContext(SettingsContext)
+    const { changeAnimationState, changeEngLanguageState, changeLightModeState, lightMode, engLanguage } = React.useContext(SettingsContext)
 
 
     const sections = {
-        spanish: ["Inicio", "Projectos", "Contacto"],
+        spanish: ["Inicio", "Proyectos", "Contacto"],
         english: ["Home", "Projects", "Contact"]
     }
 
@@ -21,9 +21,19 @@ const Header = () => {
             <div className={`diagonal diagonalLeft ${lightMode ? "diagonalLeft-light" : "diagonalLeft-dark"}`}></div>
             <h3 className="logo">LOGO</h3>
             <nav className="navbar">
-                {sections.spanish.map(item => {
-                    return <h3 key={item}>{item}</h3>
-                })}
+                {engLanguage ?
+                    (
+                        sections.english.map(item => {
+                            return <h3 key={item}>{item}</h3>
+                        })
+                    )
+                    :
+                    (
+                        sections.spanish.map(item => {
+                            return <h3 key={item}>{item}</h3>
+
+                        })
+                    )}
             </nav>
             <div className="utils">
                 <h3>LOGO</h3>

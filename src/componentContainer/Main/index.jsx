@@ -7,17 +7,17 @@ import { SettingsContext } from "../../context"
 
 const Main = () => {
 
-    const {lightMode} = useContext(SettingsContext)
+    const { lightMode, engLanguage } = useContext(SettingsContext)
 
     return (
         <main className={`mainContent ${lightMode ? "main-light" : "main-dark"}`}>
             <Header />
             <MatrixContainer />
-            <Separator title="Inicio" />
+            <Separator title={engLanguage ? "Home" : "Inicio"} />
             <PersonalInfo />
-            <Separator title="Proyectos" />
+            <Separator title={engLanguage ? "Projects" : "Proyectos"} />
             <Projects />
-            <Separator title="Contacto" />
+            <Separator title={engLanguage ? "Contact" : "Contacto"} />
             <Footer />
         </main>
     )
