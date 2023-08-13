@@ -1,17 +1,20 @@
 .terminal {
-    margin-right: 100px;
     border-radius: 1%;
     animation: 30s ease-in-out infinite floating;
 }
+
 .terminal-dark {
     background-color: #fff;
 }
+
 .terminal-light {
     background-color: #000;
 }
+
 .terminalNav {
     position: relative;
 }
+
 .actionButtonsTerminal {
     display: flex;
     gap: 10px;
@@ -20,49 +23,61 @@
     transform: translateY(-50%);
     left: 10px;
 }
+
 .actionButtonsTerminal div {
     border-radius: 100%;
     width: 15px;
     height: 15px;
 }
+
 .closeButtonTerminal {
     background-color: red;
 }
+
 .maxButtonTerminal {
     background-color: orange;
 }
+
 .minButtonTerminal {
     background-color: green;
 }
+
 .closeButtonTerminal:hover {
     opacity: 0.7;
 }
+
 .maxButtonTerminal:hover {
     opacity: 0.7;
 }
+
 .minButtonTerminal:hover {
     opacity: 0.7;
 }
+
 .terminalTitle {
     text-align: center;
     font-size: 0.8rem;
     margin: 0;
     padding: 0;
-    
+
 }
+
 .infoTerminal {
     padding: 16px;
-    border-radius:0 0 1% 1%;
+    border-radius: 0 0 1% 1%;
     white-space: pre-wrap;
 }
+
 .infoTerminal-dark {
     border: 1px solid var(--dark-color-primary);
     background-color: var(--dark-color-tertiary);
 }
+
 .infoTerminal-light {
     border: 1px solid var(--light-color-primary);
     background-color: var(--light-color-tertiary);
 }
+
 .infoTerminal h2::before {
     content: ">>";
 }
@@ -71,9 +86,11 @@
     0% {
         transform: translateY(-20px) rotateY(10deg);
     }
+
     50% {
         transform: translateY(20px) rotateY(-10deg);
     }
+
     100% {
         transform: translateY(-20px) rotateY(10deg);
     }

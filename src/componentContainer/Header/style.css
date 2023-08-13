@@ -1,21 +1,30 @@
 .headerContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "logo_area nav_area utils_area";
-    border-radius: 0px 0px 4px 0px;
-    position: relative;
     z-index: 10 !important;
-    width: 800px;
+    width: 100%;
     margin: auto;
+    overflow: hidden;
 }
 
-.headerContainer-dark {
+.headerMenu {
+    position: relative;
+    width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "logoLeft_area nav_area logoRight_area"
+        "settings_area settings_area settings_area"
+    ;
+    border-radius: 0px 0px 4px 0px;
+}
+
+.headerMenu-dark {
     background-color: var(--dark-color-tertiary);
     border-bottom: 3px solid var(--dark-color-primary);
 }
 
-.headerContainer-light {
+.headerMenu-light {
     background-color: var(--light-color-tertiary);
     border-bottom: 3px solid var(--light-color-primary);
 }
@@ -27,12 +36,15 @@
 }
 
 .navLinks {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     list-style: none;
     font-size: 1.12rem;
+    margin: 0;
+    padding: 0;
 }
 
 .navLinks a {
@@ -46,12 +58,18 @@
     transform: scale(1.1);
 }
 
-.logo {
-    grid-area: logo_area;
+.logoLeft {
+    text-align: start;
+    grid-area: logoLeft_area;
+}
+
+.logoRight {
+    text-align: end;
+    grid-area: logoRight_area;
 }
 
 .utils {
-    grid-area: utils_area;
+    grid-area: settings_area;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -74,7 +92,6 @@
     background-color: inherit;
     bottom: -2.8px;
     border-radius: 0px 0px 4px 0px;
-    z-index: -1;
 }
 
 .diagonalLeft {
@@ -84,36 +101,41 @@
 }
 
 .diagonalLeft-dark {
+    background-color: var(--dark-color-tertiary);
     border-left: 3px solid var(--dark-color-primary);
 }
 
 .diagonalLeft-light {
+    background-color: var(--light-color-tertiary);
     border-left: 3px solid var(--light-color-primary);
 }
 
 .diagonalRight {
-    right: 2px;
+    right: 0px;
     z-index: -1 !important;
     transform: rotate(45deg);
     transform-origin: bottom right;
 }
 
 .diagonalRight-dark {
+    background-color: var(--dark-color-tertiary);
     border-right: 3px solid var(--dark-color-primary);
 }
 
 .diagonalRight-light {
+    background-color: var(--light-color-tertiary);
     border-right: 3px solid var(--light-color-primary);
 }
 
 .goUpButtonContainer {
     display: block;
 }
+
 .goUpButton {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 10;
+    z-index: 10!important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -124,6 +146,7 @@
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
+
 .goUpButton:hover {
     transform: scale(1.2);
 }
@@ -134,9 +157,11 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
+
 .arrow-dark {
     border-bottom: 20px solid var(--dark-color-secondary);
 }
+
 .arrow-light {
     border-bottom: 20px solid var(--light-color-secondary);
 }
@@ -145,9 +170,11 @@
     width: 4px;
     height: 20px;
 }
+
 .arrow-stem-dark {
     background-color: var(--dark-color-secondary);
 }
+
 .arrow-stem-light {
     background-color: var(--light-color-secondary);
 }
@@ -160,6 +187,44 @@
     background-color: var(--light-color-primary);
 }
 
-/* .boxShadow {
-    box-shadow: 0px 0px 45px 15px #008000c4;
-} */
+@media (min-width: 768px) and (max-width: 1140px) {
+    .headerMenu {
+        width: 70%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .headerMenu {
+        width: 60%;
+    }
+    .headerMenu {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "nav_area"
+            "settings_area"
+        ;
+    }
+    .navLinks {
+        margin: 16px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px 24px;
+    }
+    .utils {
+        align-items: center;
+    }
+    
+    .logo {
+        display: none;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 492px) {
+    .diagonalRight {
+        transform: rotate(30deg);
+    }
+    .diagonalLeft {
+        transform: rotate(-30deg);
+    }
+} 

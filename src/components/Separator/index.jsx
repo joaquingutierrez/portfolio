@@ -11,9 +11,9 @@ const Separator = ({title}) => {
     return (
         <div className="separatorContainer" id={title}>
             <div className={`separator ${lightMode ? "separator-light" : "separator-dark"}`}></div>
-            <img src={keyboard} alt="keyboard" />
+            <img className="separatorImg" src={keyboard} alt="keyboard" />
             <h2>{title}</h2>
-            <img src={keyboard} alt="keyboard" />
+            <img className="separatorImg" src={keyboard} alt="keyboard" />
             <div className={`separator ${lightMode ? "separator-light" : "separator-dark"}`}></div>
         </div>
     )

@@ -4,13 +4,22 @@
     align-items: center;
     margin: 100px auto;
 }
+
 .separator {
     width: 33%;
     height: 1px;
 }
+
 .separator-dark {
     background-color: var(--dark-color-primary);
 }
+
 .separator-light {
     background-color: var(--light-color-primary);
+}
+
+@media (min-width: 0px) and (max-width: 642px) {
+    .separatorImg {
+        display: none;
+    }
 }

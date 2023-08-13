@@ -1,8 +1,9 @@
 .personalInfoContainer {
     display: flex;
     perspective: 700px;
-    padding: 50px 0;
     margin: auto;
+    align-items: center;
+    gap: 100px;
 }
 
 .imgContainerCV {
@@ -11,10 +12,12 @@
     padding: 10px;
     border-radius: 50%;
 }
+
 .imgContainerCV-dark {
     border: 4px solid var(--dark-color-primary);
     background-color: var(--dark-color-tertiary);
 }
+
 .imgContainerCV-light {
     border: 4px solid var(--light-color-primary);
     background-color: var(--light-color-tertiary);
@@ -26,5 +29,36 @@
     border-radius: 20%;
 }
 
+@media (min-width: 0px) and (max-width: 1250px) {
+    .personalInfoContainer {
+        width: 90%;
+        gap: 30px;
+    }
+
+    .imgContainerCV {
+        width: 250px;
+        height: 250px;
+    }
+    .imgContainerCV img {
+        width: 250px;
+        height: 250px;
+    }
+}
 
 
+@media (min-width: 644px) and (max-width: 977px) {
+    .personalInfoContainer {
+        flex-direction: column-reverse;
+        width: 600px;
+        gap: 30px;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 643px) {
+    .personalInfoContainer {
+        flex-direction: column-reverse;
+        width: 80%;
+        gap: 30px;
+    }
+}
