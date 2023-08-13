@@ -7,12 +7,14 @@ import { SettingsContext } from "../../context";
 
 const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
 
-    const { lightMode, engLanguage } = useContext(SettingsContext)
+    const { lightMode, engLanguage, animation } = useContext(SettingsContext)
 
     const openMenu = () => {
         const myDialog = document.getElementById("myDialog")
         myDialog.showModal()
     }
+
+    console.log(lightMode)
 
     return (
         <>
@@ -21,15 +23,15 @@ const Options = ({ handleLanguage, handleAnimation, handleLightDark }) => {
                 <form method="dialog">
                     <div className="option">
                         <h3>Language</h3>
-                        <ButtonSwitch handleButton={handleLanguage} textOn="Esp" textOff="Eng" />
+                        <ButtonSwitch activated={engLanguage} handleButton={handleLanguage} textOn="Eng" textOff="Esp" />
                     </div>
                     <div className="option">
                         <h3>Matrix</h3>
-                        <ButtonSwitch handleButton={handleAnimation} />
+                        <ButtonSwitch activated={animation} handleButton={handleAnimation} />
                     </div>
                     <div className="option">
                         <h3>Mode</h3>
-                        <ButtonSwitch handleButton={handleLightDark} textOn="Light" textOff="Dark" />
+                        <ButtonSwitch activated={lightMode} handleButton={handleLightDark} textOn="Light" textOff="Dark" />
                     </div>
                     <CustomButton title="Cerrar" />
                 </form>

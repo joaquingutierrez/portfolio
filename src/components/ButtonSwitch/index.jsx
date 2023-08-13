@@ -2,13 +2,14 @@ import React from "react";
 
 import "./style.css"
 
-const ButtonSwitch = ({ handleButton, textOn = "ON", textOff = "OFF" }) => {
-
+const ButtonSwitch = ({activated = false, handleButton, textOn = "ON", textOff = "OFF" }) => {
+    console.log("activo?",activated)
+    console.log("tipo?",typeof activated)
 
     return (
-        <label className="switch" onChange={handleButton}>
+        <label className="switch">
             <div className="checkboxSwitch">
-                <input type="checkbox" className="checkbox" />
+                <input type="checkbox" className="checkbox" onChange={handleButton} checked={activated} />
                 <div className="switchONContainer">
                     <span className="textSlider switchON">{textOn}</span>
                 </div>
