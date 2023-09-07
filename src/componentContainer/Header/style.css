@@ -58,6 +58,11 @@
     transform: scale(1.1);
 }
 
+.logo {
+    width: 60px;
+    margin: auto;
+}
+
 .logoLeft {
     text-align: start;
     grid-area: logoLeft_area;

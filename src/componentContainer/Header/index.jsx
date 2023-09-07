@@ -3,6 +3,7 @@ import React from "react";
 import "./style.css"
 import { Options } from "../../components";
 import { SettingsContext } from "../../context";
+import logoDark from "../../img/logo-dark.jpg"
 
 
 const Header = () => {
@@ -37,7 +38,7 @@ const Header = () => {
         <header className="headerContainer">
             <div className={` headerMenu ${lightMode ? "headerMenu-light" : "headerMenu-dark"}`}>
                 <div className={`diagonal diagonalLeft ${lightMode ? "diagonalLeft-light" : "diagonalLeft-dark"}`}></div>
-                <h3 className="logo logoLeft">LOGO</h3>
+                <img className="logo logoLeft" src={logoDark} alt="Logo" />
                 <nav className="navbar">
                     <ul className="navLinks">
                         {engLanguage ?
@@ -55,7 +56,7 @@ const Header = () => {
                         }
                     </ul>
                 </nav>
-                <h3 className="logo logoRight">LOGO</h3>
+                <img className="logo logoRight" src={logoDark} alt="Logo" />
                 <div className="utils">
                     <div className="utilsAnimation">
                         <Options handleLanguage={changeEngLanguageState} handleAnimation={changeAnimationState} handleLightDark={changeLightModeState} />

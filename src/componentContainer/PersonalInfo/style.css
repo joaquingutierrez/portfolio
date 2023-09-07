@@ -11,6 +11,10 @@
     height: 300px;
     padding: 10px;
     border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
 }
 
 .imgContainerCV-dark {
@@ -52,6 +56,9 @@
         width: 600px;
         gap: 30px;
     }
+    .imgContainerCV {
+        margin-bottom: 60px;
+    }
 }
 
 
@@ -60,5 +67,8 @@
         flex-direction: column-reverse;
         width: 80%;
         gap: 30px;
+    }
+    .imgContainerCV {
+        margin-bottom: 80px;
     }
 }
