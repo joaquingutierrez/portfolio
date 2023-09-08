@@ -3,6 +3,7 @@ import imgCine from "../img/cine.png"
 import imgProtoripo3D from "../img/prototipo-3d.png"
 import imgCalculator from "../img/calculator.png"
 import imgEspacioKlem from "../img/espacio-klem.png"
+import imgFormularioDePresupuesto from "../img/formulario-de-presupuesto.jpg"
 
 export const portfolio = [
     {
@@ -30,7 +31,7 @@ export const portfolio = [
         ]
     },
     {
-        name: "Protoripo 3D",
+        name: "Prototipo 3D",
         linkToRepo: "https://github.com/joaquingutierrez/prototipo-3d",
         image: imgProtoripo3D,
         linkToWebSite: "https://prototipo-3d.vercel.app/",
@@ -64,6 +65,17 @@ export const portfolio = [
             "CSS",
             "javaScript",
             "React JS"
+        ]
+    },
+    {
+        name: "Formulario de Presupuesto",
+        linkToRepo: "https://github.com/joaquingutierrez/Formulario-de-presupuesto",
+        image: imgFormularioDePresupuesto,
+        linkToWebSite: "https://formulario-de-presupuesto.vercel.app/",
+        technology: [
+            "HTML",
+            "CSS",
+            "javaScript"
         ]
     }
 ]
