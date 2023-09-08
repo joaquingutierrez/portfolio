@@ -69,7 +69,6 @@
 }
 
 .logoRight {
-    text-align: end;
     grid-area: logoRight_area;
 }
 

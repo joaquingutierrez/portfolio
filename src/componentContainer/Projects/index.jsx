@@ -25,7 +25,7 @@ const Projects = () => {
                             <a href={item.linkToRepo} className="link" target="_blank" rel="noreferrer"><CustomButton title={engLanguage ? "Go to Repo" : "Ir al Repo"} /></a>
                         </div>
                         <div className="imgProjectContainer" project-img-ref={index}>
-                            <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt="Modificar despues" /></a>
+                            <a href={item.linkToWebSite} target="_blank" rel="noreferrer"><img src={item.image} alt={`Proyecto ${item.title}`} loading="lazy" /></a>
                         </div>
                     </div>
                 )

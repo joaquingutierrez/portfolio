@@ -4,6 +4,7 @@ import "./style.css"
 import { Options } from "../../components";
 import { SettingsContext } from "../../context";
 import logoDark from "../../img/logo-dark.jpg"
+import logoLight from "../../img/logo-light.jpg"
 
 
 const Header = () => {
@@ -38,7 +39,7 @@ const Header = () => {
         <header className="headerContainer">
             <div className={` headerMenu ${lightMode ? "headerMenu-light" : "headerMenu-dark"}`}>
                 <div className={`diagonal diagonalLeft ${lightMode ? "diagonalLeft-light" : "diagonalLeft-dark"}`}></div>
-                <img className="logo logoLeft" src={logoDark} alt="Logo" />
+                <img className="logo logoLeft" src={lightMode ? logoLight : logoDark} alt="Logo" loading="lazy" />
                 <nav className="navbar">
                     <ul className="navLinks">
                         {engLanguage ?
@@ -56,7 +57,7 @@ const Header = () => {
                         }
                     </ul>
                 </nav>
-                <img className="logo logoRight" src={logoDark} alt="Logo" />
+                <img className="logo logoRight" src={lightMode ? logoLight : logoDark} alt="Logo" loading="lazy" />
                 <div className="utils">
                     <div className="utilsAnimation">
                         <Options handleLanguage={changeEngLanguageState} handleAnimation={changeAnimationState} handleLightDark={changeLightModeState} />
