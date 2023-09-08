@@ -37,7 +37,7 @@ const PersonalInfo = () => {
             )}
             <div className={`imgContainerCV  ${lightMode ? "imgContainerCV-light" : "imgContainerCV-dark"}`}>
                 <img src={imgCV} alt="Imagen de perfil" loading="lazy" />
-                <a href="https://drive.google.com/file/d/1kliyHZkRIrt0fSe-py9y3wCHI6v85e5j/view?usp=sharing" target="_blank" rel="noreferrer"><CustomButton title="Curriculum Vitae" /></a>
+                <a href={engLanguage ? "https://drive.google.com/file/d/1GCo5wQAbub1GRNW__TmpQr5rY6VLQRpB/view?usp=sharing" : "https://drive.google.com/file/d/1CG-JLmnCOFNOwGMZVxDzECL7dg-by0os/view?usp=sharing"} target="_blank" rel="noreferrer"><CustomButton title="Curriculum Vitae" /></a>
             </div>
         </section>
     )
